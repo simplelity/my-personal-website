@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虞乐 - 环境工程师与技术爱好者</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2ecc71;  /* 环保绿 */
+            --secondary-color: #3498db; /* 科技蓝 */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+    
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+    
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+    
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+    
+        .timeline {
+            position: relative;
+            padding: 3rem 0;
+        }
+    
+        .timeline-item {
+            padding: 2rem;
+            margin: 2rem 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            position: relative;
+            transition: transform 0.3s;
+        }
+    
+        .honors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    
+        .honor-card {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    
+        /* 兴趣爱好部分样式 */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    
+        .hobby-card {
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+    
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+    
+        .hobby-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+    
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+    
+        .game-tag {
+            background: #f0f0f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+    
+        .skill-bars {
+            margin: 1.5rem 0;
+        }
+    
+        .bar {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+    
+        .level {
+            height: 100%;
+            background: var(--primary-color);
+            border-radius: 4px;
+            position: relative;
+        }
+    
+        .level::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -2px;
+            height: 12px;
+            width: 12px;
+            background: white;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+        }
+    
+        .callout {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+    
+        footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+    
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1>虞乐</h1>
+            <div class="nav-links">
+                <a href="#about">关于</a>
+                <a href="#education">教育</a>
+                <a href="#honors">荣誉</a>
+                <a href="#hobbies">兴趣</a>
+                <a href="#contact">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="about">
+        <h2>环境保护者 & 技术爱好者</h2>
+        <p>致力于可持续发展与技术创新融合的实践者</p>
+    </section>
+    
+    <section id="education">
+        <h2>教育经历</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>安徽工业大学 (2020-2024)</h3>
+                <p>环境工程 本科</p>
+                <p>主修课程：大气污染与控制、水污染与控制、机械原理...</p>
+            </div>
+            <div class="timeline-item">
+                <h3>华中农业大学 (2024-至今)</h3>
+                <p>环境工程 研究生</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="honors">
+        <h2>荣誉奖项</h2>
+        <div class="honors-grid">
+            <div class="honor-card">
+                <h3>🏅 国家级</h3>
+                <p>大学生程序设计竞赛金奖</p>
+                <p>国家励志奖学金</p>
+            </div>
+            <div class="honor-card">
+                <h3>🏆 校级</h3>
+                <p>优秀学生奖学金</p>
+            </div>
+            <div class="honor-card">
+                <h3>💡 技术类</h3>
+                <p>Google开发者挑战赛优胜奖</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="hobbies">
+        <h2>兴趣爱好</h2>
+        <div class="hobbies-grid">
+            <div class="hobby-card">
+                <i class="hobby-icon fas fa-table-tennis"></i>
+                <h3>羽毛球运动</h3>
+                <p>业余爱好者 | 球龄5年+</p>
+                <div class="skill-bars">
+                    <div class="skill">
+                        <span>单打能力</span>
+                        <div class="bar">
+                            <div class="level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>双打能力</span>
+                        <div class="bar">
+                            <div class="level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="callout">🏸 欢迎约球交流！</p>
+            </div>
+    
+            <div class="hobby-card">
+                <i class="hobby-icon fas fa-gamepad"></i>
+                <h3>电子竞技</h3>
+                <p>英雄联盟 - 钻石段位</p>
+                <p>策略游戏专家 | 团队指挥</p>
+                <div class="game-list">
+                    <span class="game-tag">MOBA</span>
+                    <span class="game-tag">战术竞技</span>
+                    <span class="game-tag">即时战略</span>
+                </div>
+            </div>
+    
+            <div class="hobby-card">
+                <i class="hobby-icon fas fa-headset"></i>
+                <h3>单机游戏</h3>
+                <p>开放世界探索者 | 剧情爱好者</p>
+                <div class="game-list">
+                    <span class="game-tag">荒野大镖客2</span>
+                    <span class="game-tag">上古卷轴5</span>
+                    <span class="game-tag">星际拓荒</span>
+                    <span class="game-tag">黑神话:悟空</span>
+                </div>
+                <p class="callout">🚀 更多故事正在书写...</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>联系方式</h2>
+        <div class="contact-info">
+            <p>📱 <span class="obfuscate">195-0556-5102</span></p>
+            <p>📧 <a href="mailto:3145865282@qq.com">3145865282@qq.com</a></p>
+            <p>🌐 <a href="https://github.com/the_personal_website" target="_blank">GitHub</a></p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2024 虞乐 - 探索环境与技术的无限可能</p>
+    </footer>
+    
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    
+        // 防爬虫处理
+        window.addEventListener('DOMContentLoaded', () => {
+            const obfuscated = document.querySelector('.obfuscate');
+            if (obfuscated) {
+                obfuscated.textContent = obfuscated.textContent.split('').reverse().join('');
+            }
+        });
+    </script>
+</body>
+</html>
